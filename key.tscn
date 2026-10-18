@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bifprave72k0v"]
+
+[ext_resource type="Script" uid="uid://d1vqp6e18y08g" path="res://key.gd" id="1_up4cr"]
+[ext_resource type="PackedScene" uid="uid://bjtfvwsxmbmxk" path="res://toilet/GLTF/toiletpoop.glb" id="2_p0yg6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_potrp"]
+size = Vector3(0.5201111, 0.41467285, 0.5751648)
+
+[node name="Key" type="Area3D" unique_id=930962257]
+script = ExtResource("1_up4cr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1020147861]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.003189087, 0.15350342, -0.007369995)
+shape = SubResource("BoxShape3D_potrp")
+
+[node name="toiletpoop2" parent="." unique_id=423340890 instance=ExtResource("2_p0yg6")]

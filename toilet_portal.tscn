@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b4yy8aautg5ud"]
+
+[ext_resource type="PackedScene" uid="uid://c6l0cfldlbtn6" path="res://toilet/GLTF/toiletbasictoilet.glb" id="1_xaio3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_potrp"]
+size = Vector3(0.8, 1.6, 1.2)
+
+[node name="ToiletPortal" type="StaticBody3D" unique_id=1121299459]
+
+[node name="toiletbasictoilet2" parent="." unique_id=394669725 instance=ExtResource("1_xaio3")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1529371530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15528971, -0.139)
+shape = SubResource("BoxShape3D_potrp")

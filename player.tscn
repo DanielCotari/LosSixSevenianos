@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bgvjee1601w2t"]
+
+[ext_resource type="Script" uid="uid://bo4bs4g3vdo4g" path="res://player.gd" id="1_4flbx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_potrp"]
+
+[node name="Player" type="CharacterBody3D" unique_id=1005685952]
+script = ExtResource("1_4flbx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1665459242]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_potrp")
+
+[node name="Head" type="Node3D" parent="." unique_id=1084963366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=1340402061]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head" unique_id=642804830]
+target_position = Vector3(0, -1, -2.5)
+
+[node name="FlashLight" type="SpotLight3D" parent="Head" unique_id=500425972]
+spot_range = 14.0
+spot_angle = 35.0
