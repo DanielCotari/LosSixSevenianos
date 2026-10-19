@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://kcyc4o5d5wkg"]
+
+[ext_resource type="Script" uid="uid://b8l3p8xx3vcys" path="res://volver.gd" id="1_l2arl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_potrp"]
+font_size = 54
+font_color = Color(1, 0.7176471, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6booq"]
+
+[node name="win_screen" type="Control" unique_id=1515714551]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=118105224]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -201.0
+offset_right = 229.0
+offset_bottom = 36.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "¡HAS ESCAPADO!
+...por ahora.
+ALL IS OK."
+label_settings = SubResource("LabelSettings_potrp")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="." unique_id=508607439]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -65.0
+offset_right = 288.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Esta es una beta hecha en muy poco tiempo, continuara."
+label_settings = SubResource("LabelSettings_6booq")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="volver" type="Button" parent="." unique_id=909046831]
+custom_minimum_size = Vector2(140, 45)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = 71.0
+offset_right = 85.0
+offset_bottom = 116.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8745098, 0, 0.3019608, 1)
+text = "VOLVER AL MENU"
+script = ExtResource("1_l2arl")
+
+[connection signal="pressed" from="volver" to="volver" method="_on_pressed"]
